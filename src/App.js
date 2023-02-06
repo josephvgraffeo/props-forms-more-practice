@@ -1,22 +1,29 @@
-import logo from './logo.svg';
+import Greeting from './components/Greeting';
+import NameTag from './components/NameTag';
+import UserForm from './components/UserForm';
 import './App.css';
+
+const personObj = {
+  firstName: "Bill", 
+  lastName: "Bob",
+  email: "fake1@email.com",
+  favColor:"Red",
+  date: "02/06/2023"
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Greeting />
+        <NameTag 
+          firstName="Joe" 
+          lastName="Graffeo"
+          email="fake@email.com"
+          favColor="Blue"
+          date="02/06/2023"
+        />
+        <UserForm />
       </header>
     </div>
   );
